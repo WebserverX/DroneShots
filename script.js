@@ -22,6 +22,8 @@ const images = [
     "DJI_0401.JPG"
 ];
 
+
+
 const imageEl = document.querySelector("img#show-case");
 
 function changeImage() {
