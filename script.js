@@ -35,6 +35,15 @@ function changeImage() {
 }
 imageEl.src = `media/${images[0]}`;
 setInterval(changeImage, 5000);
+const coverImage = document.querySelector("img#cover-img");
+coverImage.style.display = "none";
+setInterval(()=>{
+    if (window.innerWidth < 500) {
+        coverImage.style.display = "block";
+    } else {
+        coverImage.style.display = "none";
+    }
+}, 100);
 
 function scrollToSection(id) {
     const box = document.querySelector("#scroll-box");

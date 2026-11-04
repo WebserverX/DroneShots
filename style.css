@@ -184,6 +184,14 @@ img#zoomed-img {
   width: 99%;
 }
 
+img#cover-img {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  object-fit: cover;
+}
+
 @media (max-width: 600px) {
   div#content {
     overflow: hidden;
