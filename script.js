@@ -45,8 +45,26 @@ function scrollToSection(id) {
         behavior: "smooth"
     });
 }
+const imgBox = document.querySelector("div#zoom-img");
+const zoomImg = document.querySelector("img#zoomed-img");
+imgBox.style.display = "none";
+document.querySelector("button#close-box").addEventListener("click", ()=>{
+    imgBox.style.display = "none";
+});
 
 const galleryBox = document.querySelector("div#images");
 images.forEach((e, c) => {
-    galleryBox.innerHTML += `<img src='media/${e}' alt='im${c}' class='gallery-img'>`;
+    const img = document.createElement("img");
+
+    img.src = `media/${e}`;
+    img.alt = `im${c}`;
+    img.className = "galery-img";
+    img.id = `img${c}`;
+
+    img.addEventListener("click", () => {
+        imgBox.style.display = "block";
+        zoomImg.src = img.src;
+    });
+
+    galleryBox.appendChild(img);
 });

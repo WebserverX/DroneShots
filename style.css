@@ -35,6 +35,25 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+div#zoom-img {
+  position: fixed;
+  place-self: center;
+  display: flex;
+  width: 80%;
+  height: 90%;
+  z-index: 3;
+  border-radius: 10px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+div#zoom-img>button {
+  transform: translateX(-40px);
 }
 
 div#media {
@@ -129,7 +148,7 @@ section.content-box {
 }
 
 img#profile {
-  width: 50%;
+  width: 25%;
   border-radius: 100%;
   margin-left: 50px;
   box-shadow: 0 0 20px black;
@@ -149,7 +168,7 @@ div.drone-content > img {
   object-fit: cover;
 }
 
-img.gallery-img {
+img.galery-img {
   width: 49%;
   border: black solid 1px;
   border-radius: 10px;
@@ -157,5 +176,10 @@ img.gallery-img {
 }
 
 div#images {
+  display: flex;
   overflow: auto;
+}
+
+img#zoomed-img {
+  width: 99%;
 }
