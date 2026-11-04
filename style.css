@@ -183,3 +183,10 @@ div#images {
 img#zoomed-img {
   width: 99%;
 }
+
+@media (max-width: 600px) {
+  div#content {
+    overflow: hidden;
+    display: flex;
+  }
+}
